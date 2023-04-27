@@ -1,0 +1,150 @@
+Port; Latitude; Longitude
+Aalborg(da); 57.05; 9.9333
+Aarhus(da); 56.15; 10.2167
+Aberdeen(uk); 57.15; -2.0833
+Accra(gh); 5.5333; -0.2
+Admiralty bay(ay); -62.0833; -58.4167
+Antofagasta(ci); -23.65; -70.4167
+Apia(ws); -13.65; -171.7667
+Auckland(nz); -36.85; 174.7667
+Bahia Blanca(ar); -38.7833; -62.2667
+Barentsburg(sv); 78.0667; 14.2333
+Bergen(no); 60.4; 5.3167
+Borgholm(sw); 56.8833; 16.65
+Bremen(gm); 53.1167; 8.7167
+Bremerhaven(gm); 53.55; 8.5833
+Brest(fr); 48.3833; -4.5
+Bridgetown(bb); 13.0833; -59.6167
+Brindisi(it);40.633;17.933
+Broome(as); -17.9667; 122.2333
+Brunsbuttel(gm); 53.9; 9.1
+Cadiz(sp); 36.5333; -6.3
+Caldera(cs);  9.9333; -84.7167
+Cape Town(sf); -33.9; 18.4333
+Cartagena(sp); 37.5833; -0.98333
+Christchurch(nz);-43.5999;172.770098
+Cork(er);51.85;-8.2667
+Cuxhaven(gm); 53.8667; 8.7167
+Dakar(sg); 14.6833; -17.4333
+Dar es Salaam(tz); -6.8167; 39.3
+Darwin(as); -12.4667; 130.85
+Deutschland(gm); 53.55; 9.9667
+Dubrovnik(kr);42.642;18.108
+Durban(sf); -29.8667; 31.0667
+Eckernforde(gm); 54.4833; 9.8333
+Emden(gm); 53.3667;  7.2167
+Esbjerg(da); 55.4667; 8.45
+Flensburg(gm); 54.8; 9.4333
+Freeport(bh);26.883;-78.117
+Frederikshavn(da); 57.4333; 10.55
+Fort de France(mb); 14.6; -61.0833
+Fortaleza(br); -3.7; -38.4833
+Funchal(po); 32.6333; -16.9167
+Gdansk(pl);54.35;18.6667
+Genova(it); 44.4167; 8.9667
+Gluckstadt(gm); 53.7833; 9.4167
+Goteborg(sw); 57.7; 11.9667
+Guam(gq);13.4251;144.8178
+Guayaquil(ec); -2.2000; -79.8833
+Hamburg(gm); 53.55; 9.9667
+Hai Phong(vm);20.8667;106.6833
+Harwich(uk); 51.95; 1.2833
+Heiligenhafen(gm); 54.3667; 10.9833
+Helgoland(gm); 54.1735; 7.8933
+Hobart(as); -42.8833; 147.3333
+Honiara(bp); -9.4167; 159.95
+Hongkong(ch);22.2667;114.2
+Iraklion(gr); 35.35; 25.15
+Istanbul(tu);41.0167;28.9667
+Jakarta(id);-6.0909;106.7987
+Jubany(ay);-62.2516;-58.7431
+Kappeln(gm); 54.6667; 9.9333
+Kiel(gm); 54.3333; 10.1333
+Kobenhavn(da); 55.7; 12.6167
+Kushiro(ja); 42.9833; 144.3667
+La Coruna(sp); 43.3667; -8.4000
+Las Palmas(sp); 28.15; -15.4167
+Libreville(gb);0.4;9.45
+Limassol(cy); 34.6667; 33.05
+Lisboa(po); 38.7; -9.1667
+London(uk); 51.5; -0.083333
+Longyearbyen(sv); 78.2333; 15.65
+Madang(pp); -5.2167; 145.8167
+Makassar(id);-5.1633; 119.4085
+Male(mv); 4.1667; 73.5
+Manila(rp); 14.5833; 120.9667
+Manzanillo(mx); 19.0500; -104.3333
+Marseille(fr); 43.3167; 5.3667
+Masqat(mu);23.6317;58.5778
+Mcmurdo Sound(ay); -77.85; 166.65
+Messina(it); 38.2; 15.5667
+Mindelo(cv);16.8842;-24.9922
+Mombasa(ke); -4.0667; 39.85
+Montevideo(uy); -34.9; -56.2167
+Nagoya Ko(ja);35.0667;136.8667
+Narssarssuaq(gl); 61.15; -45.4333
+Neumayer(ay);-70.6166;-08.36660
+New York City(us); 40.7; -74.0167
+Nice(fr); 43.7; 7.2667
+Norddeich(gm); 53.6333; 7.1667
+Ny Alesund(sv); 78.9167; 11.95
+Oslo(no); 59.9167; 10.75
+Palma De Mallorca(sp);39.567;2.65
+Papeete(fp); -17.5333; -149.5833
+Perth(as);-32.058325;115.728669
+Petropavlovsk(su);53.0167;158.65
+Pinang(my); 5.4167; 100.35
+Piraievs(gr); 37.9333; 23.65
+Plymouth(uk); 50.3333; -4.1667
+Ponta Delgada(po); 37.7333; -25.6667
+Port Louis(mp); -20.15; 57.5
+Port of Nuuk(gl); 64.1833; -51.75
+Port of Spain(td); 10.6500; -61.5167
+Puerto Madryn(ar); -42.7667; -65.0333
+Punta Arenas(ci); -53.1667; -70.9
+Pusan(kn); 35.08833; 129.0
+Recife(br); -8.05; -34.8667
+Rendsburg(gm); 54.3; 9.6833
+Reykjavik(ic); 64.15; -21.9333
+Rio de Janeiro(br); -22.9000; -43.1667
+Roskilde(da); 55.65; 12.0833
+Rostock(gm); 54.1; 12.1333
+Rothera(ay);-67.65666;-68.30000
+San Juan(rq); 18.4667; -66.1167
+Sassnitz(gm); 54.5167; 13.65
+Shang Hai(ch); 31.2167; 121.5000
+Singapore(sn); 1.2833; 103.85
+Stanley(fk); -51.7; -57.8333
+Stavanger(no); 58.9833; 5.75
+St John(ca); 45.2667; -66.0500
+St Johns(ca); 47.5667; -52.7
+Stockholm(sw); 59.3333; 18.0833
+Stralsund(gm); 54.3167; 13.1
+St Thomas(us);18.32995;-64.97842
+Suape(br);-8.3983;-34.9672
+Suva Harbor(fj); -18.1333; 178.4167
+Sydney(as); -33.8667; 151.2
+Talcahuano(ci); -36.7; -73.1
+Thule Air Base(gl); 76.5333; -68.8667
+Tianjin(ch); 39.1333; 117.2000
+Trabzon(tu);41.0167;39.7667
+Travemunde(gm); 53.9667; 10.8833
+Trelleborg(sw); 55.3667; 13.15
+Tromso(no); 69.65; 18.9667
+Trondheim(no); 63.4333; 10.4
+Tomakamai(ja);42.6333;141.6333
+Torshavn(fo); 62; -6.75
+Townsville(as); -19.2667; 146.8167
+Ushuaia(ar); -54.8167; -68.3
+Valletta(mt);35.9;14.5167
+Valparaiso(ci); -33.0333; -71.6167
+Vigo(sp); 42.2333; -8.7167
+Vladivostok(rs);43.1167;131.9
+Walvisbaai(wa); -22.95; 14.5
+Warnemunde(gm); 54.1833; 12.1
+Wellington(nz);-41.2233;174.7833
+Wilhelmshaven(gm); 53.5167; 8.15
+Wismar(gm); 53.9; 11.4667
+Wolgast(gm); 54.05; 13.7833
+Yokohama(ja); 35.4500; 139.5833
+
