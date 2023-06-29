@@ -1,5 +1,5 @@
 function [mstruct,h] = Plot_Map(S,LATLIM,LONLIM,latcenter,loncenter,radius,plteez)
-%
+% Plot map ship route with coastlines, waypoints and stations
 %
 
 % If latmax < 86 map projection is "mercator" otherwise "stereo"

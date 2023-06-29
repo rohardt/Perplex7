@@ -1,0 +1,18 @@
+# ignore folder Cruise
+Cruise/
+
+# ignore folder Dataset
+Dataset/
+
+# ignore folder Docs
+Docs/
+
+# ignore folder Export
+Export/
+
+# ignore file Perplex7_cfg.mat
+/Perplex_cfg.mat
+
+# ignore file Perplex7_GR.prj
+/Perplex7_GR.prj
+
