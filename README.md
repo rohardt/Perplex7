@@ -3,5 +3,3 @@ At AWI PERPLEX has been used for about 22 years, mainly for cruises with RV POLA
 Initially, I just wanted to "clean up" the source code and upload them to Mathworks File Exchange. However, in more than 20 years the software Perplex had grown to about 250 files. Therefore, I had decided to make the software completely new, focusing on the essential functionality needed to plan and execute a trip. Additional functions I will add step by step, e.g. "Define Section".
 I welcome your comments and hope that you can use the source code to make changes as needed to more efficiently adjust Perplex7 to your institution's specific requirements.
 Find further details in Perplex7-Manual.pdf
-
-June 29th 2023: This update contains some bugfixes. The error when creating a new cruise when the port of departure and the port of destination are the same has been fixed. Additionally, in the map EEZ boundaries can be plotted and ship speed can be changed for multiple rows in the station tab.
