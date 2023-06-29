@@ -1,4 +1,4 @@
-function [mstruct,h] = Plot_Map(S,LATLIM,LONLIM,latcenter,loncenter,radius)
+function [mstruct,h] = Plot_Map(S,LATLIM,LONLIM,latcenter,loncenter,radius,plteez)
 %
 %
 
@@ -42,14 +42,16 @@ else
     % compute center of all locations
     if isnan(latcenter)
         [latm,lonm] = meanm(S.Latitude,S.Longitude);
-        OY = round(latm,-1);
+        % OY = round(latm,-1);
+        OY = round(latm,0);
         if lonm < 100
             OX = round(lonm,0);
         else
             OX = round(lonm,-1);
         end
         % latmin to OY == FLAT
-        FLAT = round((latm - LATLIM(1)),0).*2;
+        % FLAT = round((latm - LATLIM(1)),0).*2;
+        FLAT = round((latm - LATLIM(1)),0);
     else
 
         % zoom stereo map
@@ -78,7 +80,8 @@ else
     m = 2.*FLAT ./ x;
     xx=x(m<=10 & m>=2);
     dpll=min(xx);
-    pll=-90:dpll:90;
+    % pll=-90:dpll:90;
+    pll=round(LATLIM(1)):dpll:90;   
     clear m xx;
     m=DLON./x;
     xx=x(m<=10 & m>=2);
@@ -109,17 +112,20 @@ else
     'FontSize', 8 ,...
     'Grid',MGRID);
     mstruct = getm(ax);    
-    % framem('FlineWidth',1,'FEdgeColor','black');
 end
 
 hold on;
-% plot the coastline (blue)
-% change here if other then the ones supplied with the mapping TB should be used
-load('coastlines.mat');
-hc=plotm(coastlat,coastlon,'b-');
-set(hc,'LineWidth',1.5);
 
-h = nan(1,5);
+h = nan(1,7);
+
+% skip plotting coastlines if plot plotting eez (see checkbox in Map Tab
+if ~plteez
+    % plot the coastline (blue)
+    % change here if other then the ones supplied with the mapping TB should be used
+    load('coastlines.mat');
+    h(6)=plotm(coastlat,coastlon,'b-');
+    set(h(6),'LineWidth',1.5);
+end
 
 % plot the ships track, for S.Used == 1 only (black)
 [lat,lon] = maptriml(S.Latitude(S.Used==1),S.Longitude(S.Used==1),LATLIM,LONLIM);
@@ -169,5 +175,23 @@ if ~isempty(latUsed)
         'MarkerEdgeColor',[0 0 0], ...
         'MarkerFaceColor',[0 0 0]);
 end
- 
+
+% plot eez
+if plteez
+    fn_eez = 'C:\bck\Matlab\Perplex7\Dataset\eez_v11.shp';
+    
+    % attributes = {'S_NAME' 'C_NAME' 'TERRITORY'};
+    zonelats = [];
+    zonelons = [];
+    eez = shaperead(fn_eez,...
+        'BoundingBox',[LONLIM(1), LATLIM(1); LONLIM(2), LATLIM(2)],...
+        'UseGeoCoords',true);
+    
+    zonelats = [zonelats  eez(1:end).Lat];   % Move All Latitudes into single row matrix
+    zonelons = [zonelons  eez(1:end).Lon];   % Move all longitudes into single row matrix
+    
+    h(7)=plotm(zonelats,zonelons,'g-');
+    set(h(7),'LineWidth',1);
+end
+
  

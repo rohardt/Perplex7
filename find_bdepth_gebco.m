@@ -40,6 +40,9 @@ function depth = find_bdepth_gebco(latgrd,longrd,Zgrd,LAT,LON)
         else
             j1 = j(1) - 1;
             j2 = j(1) + 1;
+            if j2 >10801
+                j2 = 10801;
+            end
         end 
         j = j1:j2;
         

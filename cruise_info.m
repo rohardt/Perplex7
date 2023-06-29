@@ -35,6 +35,9 @@ tH = round(mod(tship,tD)*24);
 H.TimeTOgo = num2str([tD tH]); % in days and hours
 % (5) Avaerage Ship Speed: knots
 vel = route/tshipH; % nautical miles/hours
+if isnan(vel)
+    vel = S.Speed(1);
+end
 H.AvgShipSpeed = vel; % avg. speed in knots
 % (6) Remaining Time to Port:
 % H.ArrivalDateTime, given in TAB cruise, is the committed time of arrival
