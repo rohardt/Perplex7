@@ -1,0 +1,118 @@
+Used,Instrument,Description,User,Fixed,Handling,Down,Trawling,Up
+0,ADCP,Acoustic Doppler Current Profiler,nn,0,0,0,0,0
+0,AEROS,Aerosol Sampler,nn,0,0,0,0,0
+0,AIRGN,Airgun - Seismic Source,nn,0,0,0,0,0
+0,AIRS,Air sampler,nn,0,0,0,0,0
+0,ALTI,Altimeter,nn,0,0,0,0,0
+0,ATURBP,Air Turbulence Profiler,nn,0,0,0,0,0
+0,AUV,Autonomous underwater vehicle,nn,0,0,0,0,0
+0,BC,Box Corer,nn,0,0,0,0,0
+0,BN,Bottom Net,nn,0,0,0,0,0
+0,BOAT,Boat,nn,0,0,0,0,0
+0,BOO,Boomer - Seismic Source,nn,0,0,0,0,0
+0,BS,Benthos Sampler,nn,0,0,0,0,0
+0,BT,Bathythermograph,nn,0,0,0,0,0
+0,BUOY,Buoy,nn,0,0,0,0,0
+0,CALIB,Calibration,nn,0,0,0,0,0
+0,CCN,Cloud Condensation Nuclei,nn,0,0,0,0,0
+0,CHAM,Benthic chamber,nn,0,0,0,0,0
+0,CM,Current Meter,nn,0,0,0,0,0
+0,CO2S,CO2 Sensor,nn,0,0,0,0,0
+0,CORER,Corer,nn,0,0,0,0,0
+0,CPT,Cone penetration testing-lance,nn,0,0,0,0,0
+0,CRS,Cloud Radar System,nn,0,0,0,0,0
+0,CSEM,Controlled Source Electromagnetics,nn,0,0,0,0,0
+1,CTD,CTD,Sandra,0,15,0.8,0,0.8
+0,DOAS,Differential Optical Absorption Spectrometers,nn,0,0,0,0,0
+0,DRG,Dredge,nn,0,0,0,0,0
+0,DRIFT,Drifter,nn,0,0,0,0,0
+0,DRILL,Drill,nn,0,0,0,0,0
+0,DTSEIS,Deep-Tow Streamer - Seismic Receiver,nn,0,0,0,0,0
+0,ECHO,Echo Sounder,nn,0,0,0,0,0
+1,FLOAT,Float,Olaf,0,10,0,0,0
+0,FLU,Fluorometer,nn,0,0,0,0,0
+0,FN,Fish Net,nn,0,0,0,0,0
+0,GC,Gravity Corer,nn,0,0,0,0,0
+0,GDS,Geodesy Station,nn,0,0,0,0,0
+0,GIGN,Gi-Gun - Seismic Source,nn,0,0,0,0,0
+0,GLD,Glider,nn,0,0,0,0,0
+0,GPS,Global Positioning System,nn,0,0,0,0,0
+0,GRAB,Grab,nn,0,0,0,0,0
+0,GRAV,Gravimeter,nn,0,0,0,0,0
+0,HELI,Helicopter,nn,0,0,0,0,0
+0,HF,Heat Flow Probe,nn,0,0,0,0,0
+0,HYDRO,Hydrophon,nn,0,0,0,0,0
+0,ICE,Ice Station,nn,0,0,0,0,0
+0,LANDER,Lander,nn,0,0,0,0,0
+0,LIDAR,Light Detection And Ranging,nn,0,0,0,0,0
+0,LIFT,Deep-sea elevator,nn,0,0,0,0,0
+0,LIOP,Light/Optics,nn,0,0,0,0,0
+0,MAG,Magnetometer,nn,0,0,0,0,0
+0,MCS,Multi-Channel Streamer - Seismic Receiver,nn,0,0,0,0,0
+0,METHAN,Methane Sensor,nn,0,0,0,0,0
+1,MOOR/D,Mooring Deployment,Matthias,4,0,0,0,0
+1,MOOR/R,Mooring Recovery,Matthias,8,0,0,0,0
+0,MSS,Micro Structure Probe,nn,0,0,0,0,0
+0,MT,Magnetotellurics,nn,0,0,0,0,0
+0,MUC,Multi Corer,nn,0,0,0,0,0
+0,MUFO,Multi Fibre Sensor Optics,nn,0,0,0,0,0
+0,MWR,Microwave Radiometer,nn,0,0,0,0,0
+0,NET,Net,nn,0,0,0,0,0
+0,NUA,Nutrient Analyser,nn,0,0,0,0,0
+0,O2,Oxygen Sensor,nn,0,0,0,0,0
+0,OBC,Ocean Bottom Cable - Seismic Receiver,nn,0,0,0,0,0
+0,OBH,Seismic Ocean Bottom Hydrophone,nn,0,0,0,0,0
+0,OBS,Ocean Bottom Seismometer - Seismic Receiver,nn,0,0,0,0,0
+0,OBSERV,Observer,nn,0,0,0,0,0
+0,OTIS,Ocean Tracer Injection System,nn,0,0,0,0,0
+0,OZS,Ozone Sonde,nn,0,0,0,0,0
+0,PAR,Radiation Meter,nn,0,0,0,0,0
+0,PC,Piston Corer,nn,0,0,0,0,0
+0,PCBL,P-Cable - Seismic Receiver,nn,0,0,0,0,0
+0,PH,pH Sensor,nn,0,0,0,0,0
+0,PHOTO,Photo,nn,0,0,0,0,0
+0,PIES,Pressure Inverted Echo Sounder,nn,0,0,0,0,0
+0,PIEZO,Piezometer,nn,0,0,0,0,0
+0,PLA,Plankton Net,nn,0,0,0,0,0
+0,PM,Photometer,nn,0,0,0,0,0
+0,POS,Positioning System,nn,0,0,0,0,0
+0,PR,Plankton Recorder,nn,0,0,0,0,0
+0,PROFI,Profiler,nn,0,0,0,0,0
+0,PUC,Push Corer,nn,0,0,0,0,0
+0,PUMP,Pump,nn,0,0,0,0,0
+0,RADIO,Radio Sonde,nn,0,0,0,0,0
+0,RDCP,Radar Doppler Current Profiler,nn,0,0,0,0,0
+0,REC,Recorder,nn,0,0,0,0,0
+0,RM,Radiometer,nn,0,0,0,0,0
+0,ROV,Remotely Operated Vehicle,nn,0,0,0,0,0
+0,RS,Rock Sampler,nn,0,0,0,0,0
+0,RUV,Robotic underwater vehicle,nn,0,0,0,0,0
+0,SBB,Sub Bottom Profiler,nn,0,0,0,0,0
+0,SCS,Single-Channel Streamer - Seismic Receiver,nn,0,0,0,0,0
+0,SD,Secchi Disk,nn,0,0,0,0,0
+0,SEIS,Seismic profile,nn,0,0,0,0,0
+0,SEISOBR,Seismic Ocean Bottom Receiver,nn,0,0,0,0,0
+0,SEISSRC,Seismic Source,nn,0,0,0,0,0
+0,SEISTR,Seismic Towed Receiver,nn,0,0,0,0,0
+0,SGS,Seafloor Geodetic Sensor,nn,0,0,0,0,0
+0,SHRAD,Shadowband Radiometer,nn,0,0,0,0,0
+0,SLDG,Sledge,nn,0,0,0,0,0
+0,SMPL,Sampler,nn,0,0,0,0,0
+0,SPA,Sparker - Seismic Source,nn,0,0,0,0,0
+0,SPEC,Spectrometer,nn,0,0,0,0,0
+0,SS,Sidescan Sonar,nn,0,0,0,0,0
+0,SUB,Submersible,nn,0,0,0,0,0
+0,SUV,Seafloor underwater vehicle,nn,0,0,0,0,0
+0,SVP,Sound Velocity Profiler,nn,0,0,0,0,0
+0,TBI,Turbidity Sensor,nn,0,0,0,0,0
+0,TEMPS,Temperature Sensor,nn,0,0,0,0,0
+0,TILT,Tiltmeter,nn,0,0,0,0,0
+0,TRAP,Trap,nn,0,0,0,0,0
+0,TSG,Thermosalinograph,nn,0,0,0,0,0
+0,TSI,Total Sky Imager,nn,0,0,0,0,0
+0,UAV,Unmanned aerial vehicle,nn,0,0,0,0,0
+0,VIDEO,Video,nn,0,0,0,0,0
+0,WHW,Whale Watching,nn,0,0,0,0,0
+0,WS,Water Sampler,nn,0,0,0,0,0
+0,WST,Weather station/Meteorological observation,nn,0,0,0,0,0
+0,WVGL,Wave Glider,nn,0,0,0,0,0

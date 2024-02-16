@@ -69,8 +69,10 @@ H.DeparturePort = char(SC.Name(1));
 H.DepartureDateTime = char(SC.Date_Time(1));
 H.ArrivalPort = char(SC.Name(2));
 H.ArrivalDateTime = char(SC.Date_Time(2));
-% load default instrument table
-load('Default_InstrTable.mat'); % I
+
+% load default instrument table from 'Default_InstrTable.csv'
+infile = 'Default_InstrTable.csv';
+I = readtable('Default_InstrTable.csv');
 
 % save S, C, H, and I in e.g. "CR".mat"
 % pn = 'C:\bck\Matlab\Perplex7';

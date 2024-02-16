@@ -1,134 +1,57 @@
-function [mstruct,h] = Plot_Map(S,LATLIM,LONLIM,latcenter,loncenter,radius,plteez)
-% Plot map ship route with coastlines, waypoints and stations
-%
+function [mstruct,h] = Plot_Map(S,GS,data,pltgebco,plteez,scifile,land,depth)
+% function [mstruct,h] = Plot_Map(S,GS,data,pltgebco,plteez,scifile,land,depth)
+% Plot map ship route with landareas, waypoints and stations.
+% As options users can deside plotting the EEZ, Seaice Concentration or Deth Contours 
 
-% If latmax < 86 map projection is "mercator" otherwise "stereo"
-if LATLIM < 86 
-    % map settings for mercator:
-    PTYPE = 'mercator';
-    MGRID = 'on';
-    
-    % setting for the tick label
-    x=[0.025 0.05 0.25 0.5 1 2 5 10 15 30 45];
-    % latitude ticks
-    m=(abs(diff(LATLIM)))./x;
-    xx=x(m<=10 & m>=2);
-    dpll=min(xx);
-    pll=-90:dpll:90;
-    clear m xx;
-    %longitude ticks
-    m=(abs(diff(LONLIM)))./x;
-    xx=x(m<=10 & m>=2);
-    dmll=min(xx);
-    mll=-180:dmll:360;
-    if dpll<1 || dmll<1
-        lunits='dm';
-    else
-        lunits='degrees';
-    end
-    ax = axesm('MapProjection',PTYPE,...
-	    'MapLatLimit',LATLIM,'MapLonLimit',LONLIM,...
-	    'MeridianLabel','on','ParallelLabel','on',...
-	    'MLabelLocation',mll,'PLabelLocation',pll,...
-	    'LabelFormat','signed','LabelUnits','degrees',...
-	    'MLineLocation',dmll,'PLineLocation',dpll,...
-	    'LabelUnits',lunits,'FontSize',9,...
-        'FontSize', 8 ,...
-	    'Grid',MGRID);
-    framem('FlineWidth',1,'FEdgeColor','black');
-    mstruct = getm(ax);
-else
-    % map settings for "stereo"
-    % compute center of all locations
-    if isnan(latcenter)
-        [latm,lonm] = meanm(S.Latitude,S.Longitude);
-        % OY = round(latm,-1);
-        OY = round(latm,0);
-        if lonm < 100
-            OX = round(lonm,0);
+ax = worldmap(data.LATLIM,data.LONLIM);
+mstruct = getm(ax);    
+
+if ~isempty(scifile)
+        % Plotting sea ice concentration; e.g. asi-AMSR2-s6250-20231201-v5.4.hdf
+        % Arctic or Antarctic?
+        % get path of the scifile to open LongitudeLatitudeGrid
+        [scipn,scifn,~] = fileparts(scifile);
+        wo = strfind(scifn,'n6250');
+        if ~isempty(wo)
+            % Arctic
+            latlonfile =fullfile(scipn,'LongitudeLatitudeGrid-n6250-Arctic.hdf');
         else
-            OX = round(lonm,-1);
+            % Antarctic
+            latlonfile =fullfile(scipn,'LongitudeLatitudeGrid-s6250-Antarctic.hdf');   
         end
-        % latmin to OY == FLAT
-        % FLAT = round((latm - LATLIM(1)),0).*2;
-        FLAT = round((latm - LATLIM(1)),0);
-    else
-
-        % zoom stereo map
-        OY = round(latcenter,-1);
-        if loncenter < 100
-            OX = round(loncenter,0);
-        else
-            OX = round(loncenter,-1);
-        end
-        FLAT = round(radius,-1);
-        LATLIM = [OY-FLAT OY+FLAT];
-        LONLIM = [-180 180];
-        if LATLIM(2) > 2
-            LATLIM(2) = 90;
-        end        
-    end
-    PTYPE = 'stereo';
-    MGRID = 'on';
-    FLATLIM = [-inf FLAT];
-    FLONLIM = [-180 180];
-    OYOX = [OY OX OX];
-
-    DLON = 360;
-    
-    x = [0.025 0.05 0.25 0.5 1 2 5 10 15 30 45];
-    m = 2.*FLAT ./ x;
-    xx=x(m<=10 & m>=2);
-    dpll=min(xx);
-    % pll=-90:dpll:90;
-    pll=round(LATLIM(1)):dpll:90;   
-    clear m xx;
-    m=DLON./x;
-    xx=x(m<=10 & m>=2);
-    dmll=min(xx);
-    mll=-180:dmll:360;
-    
-    if dpll<1 || dmll<1
-        lunits='dm';
-    else
-        lunits='degrees';
-    end
-    ax = axesm('MapProjection',PTYPE,...
-        'FLatLimit'             ,FLATLIM,...
-        'FLonLimit'             ,FLONLIM,...
-        'MeridianLabel'         ,'on',...
-        'ParallelLabel'         ,'on',...
-        'Origin'                ,OYOX,...
-    'MLabelLocation'        ,mll,...
-    'PLabelLocation'        ,pll,...
-    'LabelFormat'           ,'signed',...
-    'LabelUnits'            ,'degrees',...
-    'MLineLocation'         ,dmll,...
-    'PLineLocation'         ,dpll,...
-    'LabelUnits'            ,lunits,...
-    'ParallelLabel'         ,'on',...
-    'MLabelParallel'        ,OY,...
-    'PLabelMeridian'        ,OX,...
-    'FontSize', 8 ,...
-    'Grid',MGRID);
-    mstruct = getm(ax);    
+        
+        Info     = hdfinfo(latlonfile);
+        InfoSCI     = hdfinfo(scifile);
+        
+        latsci   = hdfread(latlonfile,Info.SDS(2).Name);
+        lonsci  = hdfread(latlonfile,Info.SDS(1).Name);
+        
+        sic   = hdfread(scifile,InfoSCI.SDS.Name);
+        
+        geoshow(ax,latsci, lonsci, sic,'DisplayType','texturemap');
 end
 
-hold on;
+% 
+% ax = worldmap(data.LATLIM,data.LONLIM);
+% mstruct = getm(ax);    
+
+% land = readgeotable("landareas.shp");
+geoshow(ax,land,"FaceColor",[0.5 0.7 0.5])
+
 
 h = nan(1,7);
 
 % skip plotting coastlines if plot plotting eez (see checkbox in Map Tab
-if ~plteez
-    % plot the coastline (blue)
-    % change here if other then the ones supplied with the mapping TB should be used
-    load('coastlines.mat');
-    h(6)=plotm(coastlat,coastlon,'b-');
-    set(h(6),'LineWidth',1.5);
-end
+% if ~plteez
+%     % plot the coastline (blue)
+%     % change here if other then the ones supplied with the mapping TB should be used
+%     load('coastlines.mat');
+%     h(6)=plotm(coastlat,coastlon,'b-');
+%     set(h(6),'LineWidth',1.5);
+% end
 
 % plot the ships track, for S.Used == 1 only (black)
-[lat,lon] = maptriml(S.Latitude(S.Used==1),S.Longitude(S.Used==1),LATLIM,LONLIM);
+[lat,lon] = maptriml(S.Latitude(S.Used==1),S.Longitude(S.Used==1),data.LATLIM,data.LONLIM);
 
 h(1)=plotm(lat,lon,'k-');
 % h(1)=plotm(S.Latitude(S.Used==1),S.Longitude(S.Used==1),'k-');
@@ -184,7 +107,8 @@ if plteez
     zonelats = [];
     zonelons = [];
     eez = shaperead(fn_eez,...
-        'BoundingBox',[LONLIM(1), LATLIM(1); LONLIM(2), LATLIM(2)],...
+        'BoundingBox', ...
+        [data.LONLIM(1), data.LATLIM(1); data.LONLIM(2), data.LATLIM(2)],...
         'UseGeoCoords',true);
     
     zonelats = [zonelats  eez(1:end).Lat];   % Move All Latitudes into single row matrix
@@ -194,4 +118,14 @@ if plteez
     set(h(7),'LineWidth',1);
 end
 
+% plot depth contour lines
+% Grid of the GEBCO subregion
+% GS.LAT 
+% GS.LON 
+% GS.Z
+
+if pltgebco
+    depth = depth.*(-1);
+    contourm(GS.LAT,GS.LON,GS.Z,depth);
+end
  
