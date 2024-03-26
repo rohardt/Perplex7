@@ -1,7 +1,16 @@
-function [mstruct,h] = Plot_Map(S,GS,data,pltgebco,plteez,scifile,land,depth)
-% function [mstruct,h] = Plot_Map(S,GS,data,pltgebco,plteez,scifile,land,depth)
+function [mstruct,h] = Plot_Map(pn,S,GS,data,pltgebco,plteez,scifile,land,depth)
+% function [mstruct,h] = Plot_Map(pn,S,GS,data,pltgebco,plteez,scifile,land,depth)
 % Plot map ship route with landareas, waypoints and stations.
-% As options users can deside plotting the EEZ, Seaice Concentration or Deth Contours 
+% As options users can deside plotting the EEZ, Seaice Concentration or Deth Contours
+% pn :== path from Perplex7.mlapp or Perplex7.exe
+% S :== Station Table
+% GS :== Gebco Grid of region; see LATLIM, LONLIM
+% data : structure varialbel containing LATLIM, LONLIM
+% pltgebco := flag, which controles plotting of depth contoures
+% plteez := flag, which controles plotting of eez
+% scifile :== filename of the seaiceconcentration
+% land :== shape files of land (world)
+% depth :== vector of depth for plotting contourlines
 
 ax = worldmap(data.LATLIM,data.LONLIM);
 mstruct = getm(ax);    
@@ -101,7 +110,8 @@ end
 
 % plot eez
 if plteez
-    fn_eez = 'C:\bck\Matlab\Perplex7\Dataset\eez_v11.shp';
+
+    fn_eez = fullfile(pn,'Dataset','eez_v11.shp');
     
     % attributes = {'S_NAME' 'C_NAME' 'TERRITORY'};
     zonelats = [];

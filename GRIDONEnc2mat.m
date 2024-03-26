@@ -6,7 +6,7 @@ function GRIDONEnc2mat
 % choosethe output folder ..\Perplex7\Dataset. 
 
 % Select the directory where GRIDONE_2D.nc is located. 
-pn = uigetdir;
+pn = uigetdir('C:\','Select folder from GRIDONE_2D.nc');
 gebco_file = fullfile(pn,'GRIDONE_2D.nc');
 
 % open file:

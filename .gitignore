@@ -1,3 +1,6 @@
+# ignore folder Copy_of_Dataset
+Copy_of_Dataset/
+
 # ignore folder Cruise
 Cruise/
 
@@ -7,12 +10,36 @@ Dataset/
 # ignore folder Docs
 Docs/
 
+# ignore folder Docs-all
+Docs-all/
+
 # ignore folder Export
 Export/
 
-# ignore file Perplex7_cfg.mat
-/Perplex_cfg.mat
+# ignore folder GRIDONEnc2mat
+GRIDONEnc2mat/
 
-# ignore file Perplex7_GR.prj
-/Perplex7_GR.prj
+# ignore folder Import
+Import/
+
+# ignore folder Perplex7
+Perplex7/
+
+# ignore folder Perplex7_resources
+Perplex7_resources/
+
+# ignore folder resources
+resources/
+
+# ignore file Perplex7_cfg.mat
+/Perplex7_cfg.mat
+
+# ignore file Perplex7.prj
+/Perplex7.prj
+
+# ignore file GRIDONEnc2mat.prj
+/GRIDONEnc2mat.prj
+
+# ignore file Perplex7_GitHub_GR.prj
+/Perplex7_GitHub_GR.prj
 
