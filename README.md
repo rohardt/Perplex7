@@ -12,3 +12,4 @@ The main changes in this release are:
 (4) The file Default_InstrTable.mat with the instrument settings has been changed to a CSV-file (Default_InstrTable.csv). This makes it easier for users to edit the instrument settings; see Perplex-Manual page 3 and 37.
 (5) Perplex-Manual.pdf has been updated.
 
+Release 1.5.0.0 from August 2024: Cast setup of stations can be cloned. This means that a defined sequence of devices used at a station can be easily copied for several consecutive waypoints.
