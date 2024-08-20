@@ -25,6 +25,7 @@ function [S,C] = Insert_Instrument(S,C,j,insertInstr)
                 C{1, j}.DateTime(n+1) = NaT;        
                 C{1, j}.Duration(n+1) = NaN;        
                 C{1, j}.Delay(n+1) = 0;        
-                C{1, j}.Depth(n+1) = C{1, j}.Depth(n);        
+                % C{1, j}.Depth(n+1) = C{1, j}.Depth(n);   %GR correction 03.08.2024     
+                C{1, j}.Depth(n+1) = S.Depth(j);        
                 C{1, j}.Comment(n+1) = "";
             end
