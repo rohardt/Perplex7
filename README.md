@@ -13,3 +13,6 @@ The main changes in this release are:
 (5) Perplex-Manual.pdf has been updated.
 
 Release 1.5.0.0 from August 2024: Cast setup of stations can be cloned. This means that a defined sequence of devices used at a station can be easily copied for several consecutive waypoints.
+
+March 2025:
+Matlab function "MFP_CoordinatesExportCSV.m" and added manual: "Import a cruise plan created with Marine Facilities Planning into Perplex7.pdf" added.
